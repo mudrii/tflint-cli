@@ -2,7 +2,7 @@ FROM alpine:latest
 
 # TFlint version https://github.com/wata727/tflint/releases
 
-ENV TFLINT_VERSION=v0.7.0
+ENV TFLINT_VERSION=v0.7.1
 
 RUN apk --no-cache update && \
     apk --no-cache add \
