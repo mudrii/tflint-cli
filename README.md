@@ -1,6 +1,6 @@
 # tflint-cli
 
-[tflint Versioni](https://github.com/wata727/tflint/releases)
+[tflint Version](https://github.com/wata727/tflint/releases)
 
 Alias
 
