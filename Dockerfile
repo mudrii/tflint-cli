@@ -1,8 +1,11 @@
 FROM alpine:latest
 
-# TFlint version https://github.com/wata727/tflint/releases
+RUN deluser guest ; delgroup users
+RUN addgroup -g 985 -S users
+RUN adduser -S -G users -u 1000 -s /bin/sh -h /home/mudrii mudrii
 
-ENV TFLINT_VERSION=v0.7.1
+# TFlint version https://github.com/wata727/tflint/releases
+ENV TFLINT_VERSION=v0.7.2
 
 RUN apk --no-cache update && \
     apk --no-cache add \
@@ -13,3 +16,5 @@ RUN apk --no-cache update && \
     rm -f tflin_${TFLINT_VERSION}_linux_amd64.zip && \
     apk --purge del curl && \
     rm /var/cache/apk/*
+
+USER mudrii
