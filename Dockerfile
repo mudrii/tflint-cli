@@ -5,7 +5,7 @@ RUN addgroup -g 985 -S users
 RUN adduser -S -G users -u 1000 -s /bin/sh -h /home/mudrii mudrii
 
 # TFlint version https://github.com/wata727/tflint/releases
-ENV TFLINT_VERSION=v0.7.2
+ENV TFLINT_VERSION=v0.7.3
 
 RUN apk --no-cache update && \
     apk --no-cache add \
